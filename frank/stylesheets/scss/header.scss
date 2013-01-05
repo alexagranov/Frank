@@ -74,7 +74,7 @@
 
 				border-top:2px solid $color-dark;
 				border-bottom:1px solid $color-midtone;
-				background:lighten($color-light, 3%);
+				background:rgba(lighten($color-light, 5%), .95);
 				a:hover  {
 					background:darken($color-light, 5%);
 				}

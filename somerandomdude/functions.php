@@ -1,6 +1,4 @@
 <?php
-#add_action('wp_enqueue_scripts', 'frank_enqueue_scripts');
-#add_action('wp_enqueue_scripts', 'frank_enqueue_scripts');
 
 require_once('admin/srd-theme-options.php');
 if (!is_admin()) {  

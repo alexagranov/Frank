@@ -45,15 +45,11 @@
 					$header_image_width = get_theme_support( 'custom-header', 'width' );
 				} else {
 					$header_image_width = HEADER_IMAGE_WIDTH;
+					
 				}
 				?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<?php
-				if ( is_singular() && has_post_thumbnail( $post->ID ) &&
-						( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( $header_image_width, $header_image_width ) ) ) &&
-						$image[1] >= $header_image_width ) :
-					echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-				else :
+			<?php 
 					if ( function_exists( 'get_custom_header' ) ) {
 						$header_image_width  = get_custom_header()->width;
 						$header_image_height = get_custom_header()->height;
@@ -63,21 +59,8 @@
 					}
 					?>
 				<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
-			<?php endif; ?>
 		</a>
 		<?php endif; ?>
-
-		<?php
-				if ( 'blank' == get_header_textcolor() ) :
-			?>
-				<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
-				<?php get_search_form(); ?>
-				</div>
-			<?php
-				else :
-			?>
-				<?php get_search_form(); ?>
-			<?php endif; ?>
 
 		<nav id="site-nav">
 			<?php if ( !dynamic_sidebar("Navigation") ) : ?>

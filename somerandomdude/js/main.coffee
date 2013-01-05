@@ -82,6 +82,8 @@ window.onload = ->
 	trackElems(document.querySelectorAll('#text-12 .recommended a'), 'Recommended', null, document.title);
 	trackElems(document.querySelectorAll('#page-footer #twitter-follow a.button'), 'Footer Twitter', null, document.title);
 
+	gaTrack('Document Load')
+
 	return
 
 # Track client-side JS errors

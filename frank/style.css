@@ -1407,7 +1407,7 @@ button, .button, input[type=submit] {
   left: 0;
   border-top: 2px solid #3d302f;
   border-bottom: 1px solid #5d504f;
-  background: #f7f4f4;
+  background: rgba(251, 250, 250, 0.95);
 }
 #site-nav li:hover ul a:hover {
   background: #e5dedc;
